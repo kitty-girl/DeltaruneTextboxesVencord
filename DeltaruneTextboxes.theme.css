@@ -1,0 +1,502 @@
+/**
+ * @name Deltarune Textboxes
+ * @description Vencord theme that makes all messages look like deltarune textboxes with some little extra features!
+ * @author CopyKatt (kitty-girl)
+ * @version 1.0.0
+ * @source https://github.com/kitty-girl/DeltaruneTextboxesVencord
+ * @authorId 513340710305398784
+*/
+
+/* fonts */
+@font-face {
+    font-family: '8bitop JVE';
+    src: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/fonts/8bitoperator_jve.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family: 'comic sans pixel';
+    src: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/fonts/comic-sans-pixel.ttf) format('truetype');
+}
+
+/* message background */
+.message__5126c {
+    background-color: black;
+    margin: 64px;
+    padding: 0 !important;
+    padding-left: 48px !important;
+    border: 32px solid transparent;
+    border-image: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/textboxborder.gif) 64 round;
+    border-image-outset: 0.5;
+    min-height:100px;
+}
+
+/* user pfp as portrait */
+.message__5126c .avatar_c19a55 {
+    position: absolute;
+    content: var(--avatar-url-128) !important;
+    transform: scale(8) !important;
+    left:-70px;
+    top: 40px;
+    border-radius: 0;
+}
+
+/* hide timestamp */
+.message__5126c .timestamp_c19a55 {
+    display: none;
+}
+
+/* username */
+.message__5126c .headerText_c19a55 .username_c19a55 {
+    display: block;
+    top:-16px;
+    left:-90px;
+    width:256px !important;
+    text-align: center !important;
+    font-family: "8bitop JVE";
+    font-size: 16px;
+}
+
+/* hide all user info but username */
+.message__5126c .headerText_c19a55 > *:not(.username_c19a55){
+    display: none;
+}
+
+/* offset username to below portrait */
+.message__5126c .headerText_c19a55 {
+    position: absolute;
+    display: block;
+    left:-64px;
+    top:128px;
+}
+
+/* offset entire message right */
+.message__5126c > .contents_c19a55 {
+    position: relative;
+    top:0px;
+    left:140px;
+    width: calc(100% - 110px) !important;
+}
+
+/* offset message content up */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 {
+    position: relative;
+    top:-16px;
+}
+
+/* asterisk */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55:not(:empty)::before {
+    display: inline-block;
+    content: '   *';
+    position: relative;
+    left:8px;
+    width:64px;
+    margin-left:0px;
+    vertical-align: top;
+    font-size: 32px;
+    font-weight: 0;
+    line-height: 40px;
+    --custom-emoji-size-emoji:32px;
+    font-family: "8bitop JVE";
+}
+/* asterisk for comic sans */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55:has(u:first-child)::before {
+    font-family: 'comic sans pixel';
+    font-size: 28px;
+    left:8px;
+}
+/* normal message */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 > * {
+    display: inline;
+    margin-top:-16px;
+    margin-left:0px;
+    vertical-align: top;
+    font-size: 32px;
+    font-weight: 0;
+    line-height: 40px;
+    padding-bottom:4px;
+    --custom-emoji-size-emoji:32px;
+    
+    font-family: "8bitop JVE";
+}
+/* -# small text */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 > small {
+    font-size:16px;
+}
+/* **bold** (turns red) */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 strong {
+    font-weight: 0;
+    color:red;
+}
+/* *italic* (turns yellow) */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 em {
+    font-style: normal;
+    color:yellow;
+}
+/* ***bold and italic*** (turns into the "human i remember you're genocides" meme) */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 em > strong {
+    color:red;
+    text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
+}
+/* _underlined_ (turns into comic sans) */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 u {
+    text-decoration:none;
+    font-family: 'comic sans pixel';
+    font-size: 28px;
+}
+
+/* replied message offset */
+.message__5126c .repliedMessage_c19a55 {
+    display: flex;
+    position:absolute;
+    top:-70px;
+}
+
+/* offset embeds to the right */
+.message__5126c > .container_b7e1cb {
+    left: 100px;
+    margin-right: 100px;
+}
+/* fix spacing on embeds with no message */
+.message__5126c:has(> .contents_c19a55 > .messageContent_c19a55:empty) > .container_b7e1cb {
+    margin-top:-16px;
+    margin-bottom:-16px;
+}
+
+/* (edited) text size */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 .timestamp_c19a55 > time > span {
+    font-size: 16px !important;
+}
+
+/* use emoji as portrait if message starts with it */
+.message__5126c > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child {
+    position: absolute;
+    --custom-emoji-size-emoji:128px;
+    left:-136px;
+    top:16px
+}
+.message__5126c:has(> .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child) .avatar_c19a55 {
+    display: none;
+}
+
+/* fix emoji offset */
+.message__5126c .emojiContainer__75abc {
+    position: relative;
+    top:-4px;
+}
+
+/* turn replying and mentioned messages border yellow */
+.message__5126c.mentioned__5126c,
+.message__5126c.replying__5126c {
+    border-image: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/reply_textboxborder.gif) 64 round;
+    border-image-outset: 0.5;
+}
+/* turn deleted messages (messagelogger plugin) border red */
+.messagelogger-deleted .message__5126c {
+    border-image: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/deleted_textboxborder.gif) 64 round;
+    border-image-outset: 0.5;
+}
+
+/* edited message fix */
+.messagelogger-edited {
+    display: block !important;
+    position: relative;
+    top: -24px;
+}
+
+
+/* remove yellow line from pings */
+.mentioned__5126c::before {
+    display: none !important;
+}
+
+/* no pfp from server messages */
+.message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) {
+    left:0px !important;
+}
+
+.message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .iconContainer__235ca {
+    display: none;
+}
+.message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::before {
+    content: '('
+}
+.message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::after {
+    content: ')'
+}
+.message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca {
+    margin-top:-32px !important;
+    height:64px;
+    font-size: 32px;
+    color:white;
+    /* background-color:red !important; */
+}
+
+
+/* EMOJI REPLACERS */
+
+/* pink */
+.emojiSpriteImage_d982c2[style*='-360px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/d9f29e327c91f7e5.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.image__1859b[src='/assets/d9f29e327c91f7e5.svg'], .image__1859b[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.emoji__045fa[src='/assets/d9f29e327c91f7e5.svg'], .emoji__045fa[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.emojiImage__13533[src='/assets/d9f29e327c91f7e5.svg'], .emojiImage__13533[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.icon_c1e9c4[src='/assets/d9f29e327c91f7e5.svg'], .icon_c1e9c4[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.icon_f563df[src='/assets/d9f29e327c91f7e5.svg'], .icon_f563df[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.emoji_cc2dff[src='/assets/d9f29e327c91f7e5.svg'], .emoji_cc2dff[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.emoji__01c8c[src='/assets/d9f29e327c91f7e5.svg'], .emoji__01c8c[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.roleIcon__1e6f1[src='/assets/d9f29e327c91f7e5.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'],
+.emoji[src='/assets/d9f29e327c91f7e5.svg'], .emoji[style*='background-image: url("/assets/d9f29e327c91f7e5.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/pink.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* red */
+.emojiSpriteImage_d982c2[style*='-400px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/8838f014a5d2ce59.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.image__1859b[src='/assets/8838f014a5d2ce59.svg'], .image__1859b[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.emoji__045fa[src='/assets/8838f014a5d2ce59.svg'], .emoji__045fa[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.emojiImage__13533[src='/assets/8838f014a5d2ce59.svg'], .emojiImage__13533[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.icon_c1e9c4[src='/assets/8838f014a5d2ce59.svg'], .icon_c1e9c4[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.icon_f563df[src='/assets/8838f014a5d2ce59.svg'], .icon_f563df[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.emoji_cc2dff[src='/assets/8838f014a5d2ce59.svg'], .emoji_cc2dff[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.emoji__01c8c[src='/assets/8838f014a5d2ce59.svg'], .emoji__01c8c[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.roleIcon__1e6f1[src='/assets/8838f014a5d2ce59.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'],
+.emoji[src='/assets/8838f014a5d2ce59.svg'], .emoji[style*='background-image: url("/assets/8838f014a5d2ce59.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/red.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* orange */
+.emojiSpriteImage_d982c2[style*='-440px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/4fc22e80b4a7271e.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.image__1859b[src='/assets/4fc22e80b4a7271e.svg'], .image__1859b[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.emoji__045fa[src='/assets/4fc22e80b4a7271e.svg'], .emoji__045fa[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.emojiImage__13533[src='/assets/4fc22e80b4a7271e.svg'], .emojiImage__13533[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.icon_c1e9c4[src='/assets/4fc22e80b4a7271e.svg'], .icon_c1e9c4[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.icon_f563df[src='/assets/4fc22e80b4a7271e.svg'], .icon_f563df[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.emoji_cc2dff[src='/assets/4fc22e80b4a7271e.svg'], .emoji_cc2dff[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.emoji__01c8c[src='/assets/4fc22e80b4a7271e.svg'], .emoji__01c8c[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.roleIcon__1e6f1[src='/assets/4fc22e80b4a7271e.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'],
+.emoji[src='/assets/4fc22e80b4a7271e.svg'], .emoji[style*='background-image: url("/assets/4fc22e80b4a7271e.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/orange.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* yellow */
+.emojiSpriteImage_d982c2[style*='-480px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/4252a4264c0874b9.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.image__1859b[src='/assets/4252a4264c0874b9.svg'], .image__1859b[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.emoji__045fa[src='/assets/4252a4264c0874b9.svg'], .emoji__045fa[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.emojiImage__13533[src='/assets/4252a4264c0874b9.svg'], .emojiImage__13533[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.icon_c1e9c4[src='/assets/4252a4264c0874b9.svg'], .icon_c1e9c4[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.icon_f563df[src='/assets/4252a4264c0874b9.svg'], .icon_f563df[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.emoji_cc2dff[src='/assets/4252a4264c0874b9.svg'], .emoji_cc2dff[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.emoji__01c8c[src='/assets/4252a4264c0874b9.svg'], .emoji__01c8c[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.roleIcon__1e6f1[src='/assets/4252a4264c0874b9.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/4252a4264c0874b9.svg")'],
+.emoji[src='/assets/4252a4264c0874b9.svg'], .emoji[style*='background-image: url("/assets/4252a4264c0874b9.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/yellow.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* green */
+.emojiSpriteImage_d982c2[style*='-520px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/26251697968a8cfe.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.image__1859b[src='/assets/26251697968a8cfe.svg'], .image__1859b[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.emoji__045fa[src='/assets/26251697968a8cfe.svg'], .emoji__045fa[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.emojiImage__13533[src='/assets/26251697968a8cfe.svg'], .emojiImage__13533[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.icon_c1e9c4[src='/assets/26251697968a8cfe.svg'], .icon_c1e9c4[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.icon_f563df[src='/assets/26251697968a8cfe.svg'], .icon_f563df[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.emoji_cc2dff[src='/assets/26251697968a8cfe.svg'], .emoji_cc2dff[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.emoji__01c8c[src='/assets/26251697968a8cfe.svg'], .emoji__01c8c[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.roleIcon__1e6f1[src='/assets/26251697968a8cfe.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/26251697968a8cfe.svg")'],
+.emoji[src='/assets/26251697968a8cfe.svg'], .emoji[style*='background-image: url("/assets/26251697968a8cfe.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/green.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* light_blue */
+.emojiSpriteImage_d982c2[style*='-560px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/d501ea5d9ad171fd.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.image__1859b[src='/assets/d501ea5d9ad171fd.svg'], .image__1859b[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.emoji__045fa[src='/assets/d501ea5d9ad171fd.svg'], .emoji__045fa[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.emojiImage__13533[src='/assets/d501ea5d9ad171fd.svg'], .emojiImage__13533[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.icon_c1e9c4[src='/assets/d501ea5d9ad171fd.svg'], .icon_c1e9c4[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.icon_f563df[src='/assets/d501ea5d9ad171fd.svg'], .icon_f563df[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.emoji_cc2dff[src='/assets/d501ea5d9ad171fd.svg'], .emoji_cc2dff[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.emoji__01c8c[src='/assets/d501ea5d9ad171fd.svg'], .emoji__01c8c[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.roleIcon__1e6f1[src='/assets/d501ea5d9ad171fd.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'],
+.emoji[src='/assets/d501ea5d9ad171fd.svg'], .emoji[style*='background-image: url("/assets/d501ea5d9ad171fd.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/light_blue.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* blue */
+.emojiSpriteImage_d982c2[style*='-600px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/38e3d73c40b8a5b1.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.image__1859b[src='/assets/38e3d73c40b8a5b1.svg'], .image__1859b[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.emoji__045fa[src='/assets/38e3d73c40b8a5b1.svg'], .emoji__045fa[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.emojiImage__13533[src='/assets/38e3d73c40b8a5b1.svg'], .emojiImage__13533[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.icon_c1e9c4[src='/assets/38e3d73c40b8a5b1.svg'], .icon_c1e9c4[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.icon_f563df[src='/assets/38e3d73c40b8a5b1.svg'], .icon_f563df[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.emoji_cc2dff[src='/assets/38e3d73c40b8a5b1.svg'], .emoji_cc2dff[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.emoji__01c8c[src='/assets/38e3d73c40b8a5b1.svg'], .emoji__01c8c[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.roleIcon__1e6f1[src='/assets/38e3d73c40b8a5b1.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'],
+.emoji[src='/assets/38e3d73c40b8a5b1.svg'], .emoji[style*='background-image: url("/assets/38e3d73c40b8a5b1.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/blue.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* purple */
+.emojiSpriteImage_d982c2[style*='-640px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/1f8ac1eb4350eff0.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.image__1859b[src='/assets/1f8ac1eb4350eff0.svg'], .image__1859b[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.emoji__045fa[src='/assets/1f8ac1eb4350eff0.svg'], .emoji__045fa[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.emojiImage__13533[src='/assets/1f8ac1eb4350eff0.svg'], .emojiImage__13533[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.icon_c1e9c4[src='/assets/1f8ac1eb4350eff0.svg'], .icon_c1e9c4[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.icon_f563df[src='/assets/1f8ac1eb4350eff0.svg'], .icon_f563df[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.emoji_cc2dff[src='/assets/1f8ac1eb4350eff0.svg'], .emoji_cc2dff[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.emoji__01c8c[src='/assets/1f8ac1eb4350eff0.svg'], .emoji__01c8c[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.roleIcon__1e6f1[src='/assets/1f8ac1eb4350eff0.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'],
+.emoji[src='/assets/1f8ac1eb4350eff0.svg'], .emoji[style*='background-image: url("/assets/1f8ac1eb4350eff0.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/purple.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* black */
+.emojiSpriteImage_d982c2[style*='-680px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/8308483404c3e885.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.image__1859b[src='/assets/8308483404c3e885.svg'], .image__1859b[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.emoji__045fa[src='/assets/8308483404c3e885.svg'], .emoji__045fa[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.emojiImage__13533[src='/assets/8308483404c3e885.svg'], .emojiImage__13533[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.icon_c1e9c4[src='/assets/8308483404c3e885.svg'], .icon_c1e9c4[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.icon_f563df[src='/assets/8308483404c3e885.svg'], .icon_f563df[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.emoji_cc2dff[src='/assets/8308483404c3e885.svg'], .emoji_cc2dff[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.emoji__01c8c[src='/assets/8308483404c3e885.svg'], .emoji__01c8c[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.roleIcon__1e6f1[src='/assets/8308483404c3e885.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/8308483404c3e885.svg")'],
+.emoji[src='/assets/8308483404c3e885.svg'], .emoji[style*='background-image: url("/assets/8308483404c3e885.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/black.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* gray */
+.emojiSpriteImage_d982c2[style*='-720px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/d88727ff6ab7df78.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.image__1859b[src='/assets/d88727ff6ab7df78.svg'], .image__1859b[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.emoji__045fa[src='/assets/d88727ff6ab7df78.svg'], .emoji__045fa[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.emojiImage__13533[src='/assets/d88727ff6ab7df78.svg'], .emojiImage__13533[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.icon_c1e9c4[src='/assets/d88727ff6ab7df78.svg'], .icon_c1e9c4[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.icon_f563df[src='/assets/d88727ff6ab7df78.svg'], .icon_f563df[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.emoji_cc2dff[src='/assets/d88727ff6ab7df78.svg'], .emoji_cc2dff[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.emoji__01c8c[src='/assets/d88727ff6ab7df78.svg'], .emoji__01c8c[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.roleIcon__1e6f1[src='/assets/d88727ff6ab7df78.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'],
+.emoji[src='/assets/d88727ff6ab7df78.svg'], .emoji[style*='background-image: url("/assets/d88727ff6ab7df78.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/gray.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* white */
+.emojiSpriteImage_d982c2[style*='-760px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/40ecad9ac8103595.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.image__1859b[src='/assets/40ecad9ac8103595.svg'], .image__1859b[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.emoji__045fa[src='/assets/40ecad9ac8103595.svg'], .emoji__045fa[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.emojiImage__13533[src='/assets/40ecad9ac8103595.svg'], .emojiImage__13533[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.icon_c1e9c4[src='/assets/40ecad9ac8103595.svg'], .icon_c1e9c4[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.icon_f563df[src='/assets/40ecad9ac8103595.svg'], .icon_f563df[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.emoji_cc2dff[src='/assets/40ecad9ac8103595.svg'], .emoji_cc2dff[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.emoji__01c8c[src='/assets/40ecad9ac8103595.svg'], .emoji__01c8c[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.roleIcon__1e6f1[src='/assets/40ecad9ac8103595.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/40ecad9ac8103595.svg")'],
+.emoji[src='/assets/40ecad9ac8103595.svg'], .emoji[style*='background-image: url("/assets/40ecad9ac8103595.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/white.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* brown */
+.emojiSpriteImage_d982c2[style*='-800px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/3b0501b889c45b17.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.image__1859b[src='/assets/3b0501b889c45b17.svg'], .image__1859b[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.emoji__045fa[src='/assets/3b0501b889c45b17.svg'], .emoji__045fa[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.emojiImage__13533[src='/assets/3b0501b889c45b17.svg'], .emojiImage__13533[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.icon_c1e9c4[src='/assets/3b0501b889c45b17.svg'], .icon_c1e9c4[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.icon_f563df[src='/assets/3b0501b889c45b17.svg'], .icon_f563df[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.emoji_cc2dff[src='/assets/3b0501b889c45b17.svg'], .emoji_cc2dff[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.emoji__01c8c[src='/assets/3b0501b889c45b17.svg'], .emoji__01c8c[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.roleIcon__1e6f1[src='/assets/3b0501b889c45b17.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/3b0501b889c45b17.svg")'],
+.emoji[src='/assets/3b0501b889c45b17.svg'], .emoji[style*='background-image: url("/assets/3b0501b889c45b17.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/brown.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+/* broken */
+.emojiSpriteImage_d982c2[style*='-840px -960px'],
+.diversityEmojiItemImage_a45a2a[src='/assets/9af131d0828468bc.svg'], .diversityEmojiItemImage_a45a2a[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.image__1859b[src='/assets/9af131d0828468bc.svg'], .image__1859b[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.emoji__045fa[src='/assets/9af131d0828468bc.svg'], .emoji__045fa[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.emojiImage__13533[src='/assets/9af131d0828468bc.svg'], .emojiImage__13533[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.icon_c1e9c4[src='/assets/9af131d0828468bc.svg'], .icon_c1e9c4[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.icon_f563df[src='/assets/9af131d0828468bc.svg'], .icon_f563df[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.emoji_cc2dff[src='/assets/9af131d0828468bc.svg'], .emoji_cc2dff[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.emoji__01c8c[src='/assets/9af131d0828468bc.svg'], .emoji__01c8c[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.roleIcon__1e6f1[src='/assets/9af131d0828468bc.svg'], .roleIcon__1e6f1[style*='background-image: url("/assets/9af131d0828468bc.svg")'],
+.emoji[src='/assets/9af131d0828468bc.svg'], .emoji[style*='background-image: url("/assets/9af131d0828468bc.svg")'] {
+    background: transparent !important;
+    content: url('https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/soul/broken.png') !important;
+    image-rendering: pixelated;
+    width:40px;
+    margin-left:-4px;
+    margin-right:-4px;
+}
+
+
+/* fix emoji chooser width */
+.emojiItem_fc7141[data-name="pink_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="orange_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="yellow_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="green_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="light_blue_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="blue_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="purple_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="black_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="grey_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="white_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="brown_heart"] > .emojiSpriteImage_d982c2,
+.emojiItem_fc7141[data-name="broken_heart"] > .emojiSpriteImage_d982c2 {
+    width:48px !important;
+}
