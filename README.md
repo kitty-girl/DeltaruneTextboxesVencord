@@ -13,6 +13,9 @@ This theme uses the ThemeAttributes vencord plugin to work properly
 
 ![Turn on the ThemeAttributes plugin](assets/readme/plugin.png)
 
+TURN OFF HARDWARE ACCELERATION!
+- It makes typing really laggy for some reason
+
 ## Features
 - Turns all messages into deltarune dark world textboxes
 

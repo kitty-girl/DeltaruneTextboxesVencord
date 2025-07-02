@@ -21,7 +21,7 @@
 
 
 /* message background */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 {
     background-color: black;
     margin: 64px;
     padding: 0 !important;
@@ -33,7 +33,7 @@
 }
 
 /* user pfp as portrait */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .avatar_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 .avatar_c19a55 {
     position: absolute;
     content: var(--avatar-url-128) !important;
     transform: scale(8) !important;
@@ -43,7 +43,7 @@
 }
 
 /* hide timestamp */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .header_c19a55 > .timestamp_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .header_c19a55 > .timestamp_c19a55 {
     display: block;
     position: absolute;
     top:-60px;
@@ -55,7 +55,7 @@
 }
 
 /* username */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .headerText_c19a55 .username_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 .headerText_c19a55 .username_c19a55 {
     display: block;
     top:-16px;
     left:-90px;
@@ -66,12 +66,12 @@
 }
 
 /* hide all user info but username */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .headerText_c19a55 > *:not(.username_c19a55){
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 .headerText_c19a55 > *:not(.username_c19a55){
     display: none;
 }
 
 /* offset username to below portrait */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .headerText_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 .headerText_c19a55 {
     position: absolute;
     display: block;
     left:-64px;
@@ -79,7 +79,7 @@
 }
 
 /* offset entire message right */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 {
     position: relative;
     top:0px;
     left:140px;
@@ -87,13 +87,13 @@
 }
 
 /* offset message content up */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 {
     position: relative;
     top:-16px;
 }
 
 /* asterisk */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55:not(:empty)::before {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55:not(:empty)::before {
     display: inline-block;
     content: '   *';
     position: relative;
@@ -108,13 +108,13 @@
     font-family: "8bitop JVE";
 }
 /* asterisk for comic sans */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55:has(u:first-child)::before {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55:has(u:first-child)::before {
     font-family: 'comic sans pixel';
     font-size: 28px;
     left:8px;
 }
 /* normal message */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 > * {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 > * {
     display: inline;
     margin-top:-16px;
     margin-left:0px;
@@ -128,68 +128,68 @@
     font-family: "8bitop JVE";
 }
 /* -# small text */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 > small {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 > small {
     font-size:16px;
 }
 /* **bold** (turns red) */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 strong {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 strong {
     font-weight: 0;
     color:red;
 }
 /* *italic* (turns yellow) */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 em {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 em {
     font-style: normal;
     color:yellow;
 }
 /* ***bold and italic*** (turns into the "human i remember you're genocides" meme) */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 em > strong {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 em > strong {
     color:red;
     text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
 }
 /* _underlined_ (turns into comic sans) */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 u {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 u {
     text-decoration:none;
     font-family: 'comic sans pixel';
     font-size: 28px;
 }
 
 /* replied message offset */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .repliedMessage_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 .repliedMessage_c19a55 {
     display: flex;
     position:absolute;
     top:-70px;
 }
 
 /* offset embeds to the right */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .container_b7e1cb {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .container_b7e1cb {
     left: 100px;
     margin-right: 100px;
 }
 /* fix spacing on embeds with no message */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c:has(> .contents_c19a55 > .messageContent_c19a55:empty) > .container_b7e1cb {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55:has(> .contents_c19a55 > .messageContent_c19a55:empty) > .container_b7e1cb {
     margin-top:-16px;
     margin-bottom:-16px;
 }
 
 /* (edited) text size */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 .timestamp_c19a55 > time > span {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 .timestamp_c19a55 > time > span {
     font-size: 16px !important;
 }
 
 /* turn replying and mentioned messages border yellow */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c.mentioned__5126c,
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c.replying__5126c {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55.mentioned__5126c,
+.messagesWrapper__36d07 .message__5126c.compact_c19a55.replying__5126c {
     border-image: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/reply_textboxborder.gif) 64 round;
     border-image-outset: 0.5;
 }
 /* turn deleted messages (messagelogger plugin) border red */
-.messagesWrapper__36d07:has(.compact_fc8177) .messagelogger-deleted .message__5126c {
+.messagesWrapper__36d07 .messagelogger-deleted .message__5126c.compact_c19a55 {
     border-image: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/deleted_textboxborder.gif) 64 round;
     border-image-outset: 0.5;
 }
 
 /* edited message fix */
-.messagesWrapper__36d07:has(.compact_fc8177) .messagelogger-edited {
+.messagesWrapper__36d07 .messagelogger-edited {
     display: block !important;
     position: relative;
     top: -24px;
@@ -197,32 +197,32 @@
 
 
 /* remove yellow line from pings */
-.messagesWrapper__36d07:has(.compact_fc8177) .mentioned__5126c::before {
+.messagesWrapper__36d07 .mentioned__5126c::before {
     display: none !important;
 }
 
 /* no pfp from server messages */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) {
     left:0px !important;
 }
 
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .iconContainer__235ca {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .iconContainer__235ca {
     display: none;
 }
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::before {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::before {
     content: '('
 }
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::after {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::after {
     content: ')'
 }
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca {
     margin-top:-32px !important;
     height:64px;
     font-size: 32px;
     color:white;
     /* background-color:red !important; */
 }
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 .timestamp_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 .timestamp_c19a55 {
     display: none;
 }
 
@@ -496,23 +496,23 @@
 }
 
 /* use emoji as portrait if message starts with it */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child {
     position: absolute;
     --custom-emoji-size-emoji:128px;
     left:-136px;
     top:16px
 }
 /* use emoji as portrait if message starts with it */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child img {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child img {
     width: 128px;
     height: 128px;
 }
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c:has(> .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child) .avatar_c19a55 {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55:has(> .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child) .avatar_c19a55 {
     display: none;
 }
 
 /* fix emoji offset */
-.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .emojiContainer__75abc {
+.messagesWrapper__36d07 .message__5126c.compact_c19a55 .emojiContainer__75abc {
     position: relative;
     top:-4px;
 }
