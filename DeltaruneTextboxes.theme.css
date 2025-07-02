@@ -19,8 +19,9 @@
     src: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/fonts/comic-sans-pixel.ttf) format('truetype');
 }
 
+
 /* message background */
-.group-spacing-0 .message__5126c {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c {
     background-color: black;
     margin: 64px;
     padding: 0 !important;
@@ -32,7 +33,7 @@
 }
 
 /* user pfp as portrait */
-.group-spacing-0 .message__5126c .avatar_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .avatar_c19a55 {
     position: absolute;
     content: var(--avatar-url-128) !important;
     transform: scale(8) !important;
@@ -42,7 +43,7 @@
 }
 
 /* hide timestamp */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .header_c19a55 > .timestamp_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .header_c19a55 > .timestamp_c19a55 {
     display: block;
     position: absolute;
     top:-60px;
@@ -54,7 +55,7 @@
 }
 
 /* username */
-.group-spacing-0 .message__5126c .headerText_c19a55 .username_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .headerText_c19a55 .username_c19a55 {
     display: block;
     top:-16px;
     left:-90px;
@@ -65,12 +66,12 @@
 }
 
 /* hide all user info but username */
-.group-spacing-0 .message__5126c .headerText_c19a55 > *:not(.username_c19a55){
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .headerText_c19a55 > *:not(.username_c19a55){
     display: none;
 }
 
 /* offset username to below portrait */
-.group-spacing-0 .message__5126c .headerText_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .headerText_c19a55 {
     position: absolute;
     display: block;
     left:-64px;
@@ -78,7 +79,7 @@
 }
 
 /* offset entire message right */
-.group-spacing-0 .message__5126c > .contents_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 {
     position: relative;
     top:0px;
     left:140px;
@@ -86,13 +87,13 @@
 }
 
 /* offset message content up */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 {
     position: relative;
     top:-16px;
 }
 
 /* asterisk */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55:not(:empty)::before {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55:not(:empty)::before {
     display: inline-block;
     content: '   *';
     position: relative;
@@ -107,13 +108,13 @@
     font-family: "8bitop JVE";
 }
 /* asterisk for comic sans */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55:has(u:first-child)::before {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55:has(u:first-child)::before {
     font-family: 'comic sans pixel';
     font-size: 28px;
     left:8px;
 }
 /* normal message */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 > * {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 > * {
     display: inline;
     margin-top:-16px;
     margin-left:0px;
@@ -127,68 +128,68 @@
     font-family: "8bitop JVE";
 }
 /* -# small text */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 > small {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 > small {
     font-size:16px;
 }
 /* **bold** (turns red) */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 strong {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 strong {
     font-weight: 0;
     color:red;
 }
 /* *italic* (turns yellow) */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 em {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 em {
     font-style: normal;
     color:yellow;
 }
 /* ***bold and italic*** (turns into the "human i remember you're genocides" meme) */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 em > strong {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 em > strong {
     color:red;
     text-shadow: 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red, 0px 0px 20px red;
 }
 /* _underlined_ (turns into comic sans) */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 u {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 u {
     text-decoration:none;
     font-family: 'comic sans pixel';
     font-size: 28px;
 }
 
 /* replied message offset */
-.group-spacing-0 .message__5126c .repliedMessage_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .repliedMessage_c19a55 {
     display: flex;
     position:absolute;
     top:-70px;
 }
 
 /* offset embeds to the right */
-.group-spacing-0 .message__5126c > .container_b7e1cb {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .container_b7e1cb {
     left: 100px;
     margin-right: 100px;
 }
 /* fix spacing on embeds with no message */
-.group-spacing-0 .message__5126c:has(> .contents_c19a55 > .messageContent_c19a55:empty) > .container_b7e1cb {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c:has(> .contents_c19a55 > .messageContent_c19a55:empty) > .container_b7e1cb {
     margin-top:-16px;
     margin-bottom:-16px;
 }
 
 /* (edited) text size */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 .timestamp_c19a55 > time > span {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 .timestamp_c19a55 > time > span {
     font-size: 16px !important;
 }
 
 /* turn replying and mentioned messages border yellow */
-.group-spacing-0 .message__5126c.mentioned__5126c,
-.group-spacing-0 .message__5126c.replying__5126c {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c.mentioned__5126c,
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c.replying__5126c {
     border-image: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/reply_textboxborder.gif) 64 round;
     border-image-outset: 0.5;
 }
 /* turn deleted messages (messagelogger plugin) border red */
-.group-spacing-0 .messagelogger-deleted .message__5126c {
+.messagesWrapper__36d07:has(.compact_fc8177) .messagelogger-deleted .message__5126c {
     border-image: url(https://raw.githubusercontent.com/kitty-girl/DeltaruneTextboxesVencord/refs/heads/main/assets/images/deleted_textboxborder.gif) 64 round;
     border-image-outset: 0.5;
 }
 
 /* edited message fix */
-.group-spacing-0 .messagelogger-edited {
+.messagesWrapper__36d07:has(.compact_fc8177) .messagelogger-edited {
     display: block !important;
     position: relative;
     top: -24px;
@@ -196,32 +197,32 @@
 
 
 /* remove yellow line from pings */
-.group-spacing-0 .mentioned__5126c::before {
+.messagesWrapper__36d07:has(.compact_fc8177) .mentioned__5126c::before {
     display: none !important;
 }
 
 /* no pfp from server messages */
-.group-spacing-0 .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) {
     left:0px !important;
 }
 
-.group-spacing-0 .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .iconContainer__235ca {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .iconContainer__235ca {
     display: none;
 }
-.group-spacing-0 .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::before {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::before {
     content: '('
 }
-.group-spacing-0 .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::after {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca::after {
     content: ')'
 }
-.group-spacing-0 .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 > .container__235ca > .content__235ca {
     margin-top:-32px !important;
     height:64px;
     font-size: 32px;
     color:white;
     /* background-color:red !important; */
 }
-.group-spacing-0 .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 .timestamp_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55:not(:has(> .header_c19a55 > .avatar_c19a55)) > .messageContent_c19a55 .timestamp_c19a55 {
     display: none;
 }
 
@@ -495,23 +496,146 @@
 }
 
 /* use emoji as portrait if message starts with it */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child {
     position: absolute;
     --custom-emoji-size-emoji:128px;
     left:-136px;
     top:16px
 }
 /* use emoji as portrait if message starts with it */
-.group-spacing-0 .message__5126c > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child img {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c > .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child img {
     width: 128px;
     height: 128px;
 }
-.group-spacing-0 .message__5126c:has(> .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child) .avatar_c19a55 {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c:has(> .contents_c19a55 > .messageContent_c19a55 > .emojiContainer__75abc:first-child) .avatar_c19a55 {
     display: none;
 }
 
 /* fix emoji offset */
-.group-spacing-0 .message__5126c .emojiContainer__75abc {
+.messagesWrapper__36d07:has(.compact_fc8177) .message__5126c .emojiContainer__75abc {
     position: relative;
     top:-4px;
+}
+
+html[style*="font-size: 75%"] { --message-box-scale: 0.5; }
+html[style*="font-size: 87.5%"] { --message-box-scale: 0.6; }
+html[style*="font-size: 93.75%"] { --message-box-scale: 0.7; }
+html[style*="font-size: 100%"] { --message-box-scale: 0.8; }
+html[style*="font-size: 112.5%"] { --message-box-scale: 0.9; }
+html[style*="font-size: 125%"] { --message-box-scale: 1.0; }
+html[style*="font-size: 150%"] { --message-box-scale: 1.1; }
+
+html {
+    font-size: 100% !important;
+}
+
+.messagesWrapper__36d07 > .scroller__36d07 {
+    display: block;
+    width: calc(100% / var(--message-box-scale));
+    height: calc(100% / var(--message-box-scale));
+    transform-origin: 0 0;
+    transform: scale(var(--message-box-scale));
+}
+
+/* chat scale setting */
+
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div.description_ddd181::before {
+    content:'Multiplier for the entire chat area scale (added by DeltaruneTextboxesVencord)';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div.description_ddd181 {
+    color: transparent;
+}
+
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > h3::before {
+    content:'Chat Scale';
+    color: var(--text-primary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > h3 {
+    color: transparent;
+}
+
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(1) > .markValue_a562c8::before {
+    content:'50%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(2) > .markValue_a562c8::before {
+    content:'60%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(3) > .markValue_a562c8::before {
+    content:'70%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(4) > .markValue_a562c8::before {
+    content:'80%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(5) > .markValue_a562c8::before {
+    content:'90%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(6) > .markValue_a562c8::before {
+    content:'100%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(7) > .markValue_a562c8::before {
+    content:'110%';
+    color: var(--text-secondary);
+}
+
+#appearance-tab > div > div.children__7bffb > div:nth-child(11) > div > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8 > .markValue_a562c8 {
+    color: transparent;
+    width:100%;
+}
+
+
+/* voice chat scale setting */
+
+.chatContent_f75fb0[aria-label*='voice channel'] > .messagesWrapper__36d07.group-spacing-0 { --message-box-scale: 0.5; }
+.chatContent_f75fb0[aria-label*='voice channel'] > .messagesWrapper__36d07.group-spacing-4 { --message-box-scale: 0.6; }
+.chatContent_f75fb0[aria-label*='voice channel'] > .messagesWrapper__36d07.group-spacing-8 { --message-box-scale: 0.7; }
+.chatContent_f75fb0[aria-label*='voice channel'] > .messagesWrapper__36d07.group-spacing-16 { --message-box-scale: 0.8; }
+.chatContent_f75fb0[aria-label*='voice channel'] > .messagesWrapper__36d07.group-spacing-24 { --message-box-scale: 1.0; }
+
+
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > div.description_ddd181::before {
+    content: 'Message scale multiplier ONLY FOR THE VOICE CHAT (added by DeltaruneTextboxesVencord)';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > div.description_ddd181 {
+    color: transparent;
+}
+
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > h3::before {
+    content:'Voice Chat Scale';
+    color: var(--text-primary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > h3 {
+    color: transparent;
+}
+
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(1) > .markValue_a562c8::before {
+    content:'50%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(2) > .markValue_a562c8::before {
+    content:'60%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(3) > .markValue_a562c8::before {
+    content:'70%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(4) > .markValue_a562c8::before {
+    content:'80%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8:nth-child(5) > .markValue_a562c8::before {
+    content:'100%';
+    color: var(--text-secondary);
+}
+#appearance-tab > div > div.children__7bffb > div:nth-child(8) > div > .slider_a562c8 > .track_a562c8 > .mark_a562c8 > .markValue_a562c8 {
+    color: transparent;
+    width:100%;
 }
